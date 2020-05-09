@@ -1,7 +1,7 @@
 {
   "name": "@nicht/playground",
-  "description": "a",
-  "version": "0.0.0",
+  "description": "Playground is a tool that helps you create new projects from templates quickly and efficiently.",
+  "version": "0.0.1",
   "author": "Rodolfo Olivieri",
   "bin": {
     "playground": "./bin/run"
