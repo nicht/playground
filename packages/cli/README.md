@@ -1,7 +1,5 @@
-@playground/cli
+@nicht/playground
 ===============
-
-a
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/@playground/cli.svg)](https://npmjs.org/package/@playground/cli)
@@ -16,11 +14,11 @@ a
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g @playground/cli
+$ npm install -g @nicht/playground
 $ playground COMMAND
 running command...
 $ playground (-v|--version|version)
-@playground/cli/0.0.0 linux-x64 node-v12.16.3
+@nicht/playground/0.0.0 linux-x64 node-v12.16.3
 $ playground --help [COMMAND]
 USAGE
   $ playground COMMAND
@@ -29,28 +27,51 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`playground hello [FILE]`](#playground-hello-file)
+* [`playground autocomplete [SHELL]`](#playground-autocomplete-shell)
+* [`playground commands`](#playground-commands)
 * [`playground help [COMMAND]`](#playground-help-command)
+* [`playground init`](#playground-init)
+* [`playground list`](#playground-list)
+* [`playground update [CHANNEL]`](#playground-update-channel)
 
-## `playground hello [FILE]`
+## `playground autocomplete [SHELL]`
 
-describe the command here
+display autocomplete installation instructions
 
 ```
 USAGE
-  $ playground hello [FILE]
+  $ playground autocomplete [SHELL]
+
+ARGUMENTS
+  SHELL  shell type
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -r, --refresh-cache  Refresh cache (ignores displaying instructions)
 
-EXAMPLE
-  $ playground hello
-  hello world from ./src/init.ts!
+EXAMPLES
+  $ playground autocomplete
+  $ playground autocomplete bash
+  $ playground autocomplete zsh
+  $ playground autocomplete --refresh-cache
 ```
 
-_See code: [src/commands/init.ts](https://github.com/nicht/playground/blob/v0.0.0/src/commands/hello.ts)_
+_See code: [@oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete/blob/v0.2.0/src/commands/autocomplete/index.ts)_
+
+## `playground commands`
+
+list all the commands
+
+```
+USAGE
+  $ playground commands
+
+OPTIONS
+  -h, --help  show CLI help
+  -j, --json  output in json format
+  --hidden    also show hidden commands
+```
+
+_See code: [@oclif/plugin-commands](https://github.com/oclif/plugin-commands/blob/v1.2.3/src/commands/commands.ts)_
 
 ## `playground help [COMMAND]`
 
@@ -68,4 +89,53 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.3/src/commands/help.ts)_
+
+## `playground init`
+
+Command that starts a new project from existing templates.
+
+```
+USAGE
+  $ playground init
+
+OPTIONS
+  -h, --help               show CLI help
+  -p, --template=template  Name of the template to be initialized.
+
+EXAMPLE
+  $ playground init --template=node/api-express
+  $ playground init --template node/api-express
+```
+
+_See code: [src/commands/init.ts](https://github.com/nicht/playground/blob/v0.0.0/src/commands/init.ts)_
+
+## `playground list`
+
+Command that will list the available templates.
+
+```
+USAGE
+  $ playground list
+
+OPTIONS
+  -h, --help       show CLI help
+  -t, --type=type  Template types that will be listed.
+
+EXAMPLE
+  $ playground list --type=node
+  $ playground list --type node
+```
+
+_See code: [src/commands/list.ts](https://github.com/nicht/playground/blob/v0.0.0/src/commands/list.ts)_
+
+## `playground update [CHANNEL]`
+
+update the playground CLI
+
+```
+USAGE
+  $ playground update [CHANNEL]
+```
+
+_See code: [@oclif/plugin-update](https://github.com/oclif/plugin-update/blob/v1.3.9/src/commands/update.ts)_
 <!-- commandsstop -->
