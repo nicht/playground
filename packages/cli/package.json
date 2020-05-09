@@ -74,9 +74,9 @@
     ],
     "hooks": {
       "init": [
-        "./src/hooks/init",
-        "./src/hooks/clone-templates",
-        "./src/hooks/fetch-templates"
+        "./lib/hooks/init",
+        "./lib/hooks/clone-templates",
+        "./lib/hooks/fetch-templates"
       ]
     }
   },
