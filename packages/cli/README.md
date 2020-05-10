@@ -18,7 +18,7 @@ $ npm install -g @nicht/playground
 $ playground COMMAND
 running command...
 $ playground (-v|--version|version)
-@nicht/playground/0.0.1 linux-x64 node-v12.16.3
+@nicht/playground/0.0.2 linux-x64 node-v12.16.3
 $ playground --help [COMMAND]
 USAGE
   $ playground COMMAND
@@ -29,6 +29,7 @@ USAGE
 <!-- commands -->
 * [`playground autocomplete [SHELL]`](#playground-autocomplete-shell)
 * [`playground commands`](#playground-commands)
+* [`playground config`](#playground-config)
 * [`playground help [COMMAND]`](#playground-help-command)
 * [`playground init`](#playground-init)
 * [`playground list`](#playground-list)
@@ -73,6 +74,23 @@ OPTIONS
 
 _See code: [@oclif/plugin-commands](https://github.com/oclif/plugin-commands/blob/v1.2.3/src/commands/commands.ts)_
 
+## `playground config`
+
+Command that starts a new project from existing templates.
+
+```
+USAGE
+  $ playground config
+
+OPTIONS
+  -h, --help  show CLI help
+
+EXAMPLE
+  $ playground config
+```
+
+_See code: [src/commands/config.ts](https://github.com/nicht/playground/blob/v0.0.2/src/commands/config.ts)_
+
 ## `playground help [COMMAND]`
 
 display help for playground
@@ -107,7 +125,7 @@ EXAMPLE
   $ playground init --template node/api-express
 ```
 
-_See code: [src/commands/init.ts](https://github.com/nicht/playground/blob/v0.0.1/src/commands/init.ts)_
+_See code: [src/commands/init.ts](https://github.com/nicht/playground/blob/v0.0.2/src/commands/init.ts)_
 
 ## `playground list`
 
@@ -126,7 +144,7 @@ EXAMPLE
   $ playground list --type node
 ```
 
-_See code: [src/commands/list.ts](https://github.com/nicht/playground/blob/v0.0.1/src/commands/list.ts)_
+_See code: [src/commands/list.ts](https://github.com/nicht/playground/blob/v0.0.2/src/commands/list.ts)_
 
 ## `playground update [CHANNEL]`
 
