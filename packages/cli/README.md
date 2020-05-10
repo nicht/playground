@@ -18,7 +18,7 @@ $ npm install -g @nicht/playground
 $ playground COMMAND
 running command...
 $ playground (-v|--version|version)
-@nicht/playground/0.1.0 linux-x64 node-v12.16.3
+@nicht/playground/0.0.1 linux-x64 node-v12.16.3
 $ playground --help [COMMAND]
 USAGE
   $ playground COMMAND
@@ -107,7 +107,7 @@ EXAMPLE
   $ playground init --template node/api-express
 ```
 
-_See code: [src/commands/init.ts](https://github.com/nicht/playground/blob/v0.1.0/src/commands/init.ts)_
+_See code: [src/commands/init.ts](https://github.com/nicht/playground/blob/v0.0.1/src/commands/init.ts)_
 
 ## `playground list`
 
@@ -126,7 +126,7 @@ EXAMPLE
   $ playground list --type node
 ```
 
-_See code: [src/commands/list.ts](https://github.com/nicht/playground/blob/v0.1.0/src/commands/list.ts)_
+_See code: [src/commands/list.ts](https://github.com/nicht/playground/blob/v0.0.1/src/commands/list.ts)_
 
 ## `playground update [CHANNEL]`
 

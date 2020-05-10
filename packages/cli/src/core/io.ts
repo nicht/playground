@@ -1,5 +1,5 @@
 import {readdirSync, statSync} from 'fs'
-import {pathExists, readFile} from 'fs-extra'
+import {pathExists, readFile, writeFile} from 'fs-extra'
 import {homedir} from 'os'
 import {join} from 'path'
 
@@ -28,6 +28,14 @@ export default class IO {
     }
 
     return null
+  }
+
+  async writeConfiguration(content: Record<string, any>): Promise<void> {
+    const configurationFile = await this.getConfigurationFile()
+
+    if (await pathExists(configurationFile)) {
+      await writeFile(configurationFile, JSON.stringify(content, null, 4))
+    }
   }
 
   async listDirectories(path: string) {
