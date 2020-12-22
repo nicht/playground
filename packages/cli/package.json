@@ -20,7 +20,7 @@
     "enquirer": "^2.3.5",
     "fs-extra": "^9.0.0",
     "inquirer": "^7.1.0",
-    "node-notifier": "^7.0.0",
+    "node-notifier": "^8.0.1",
     "nodegit": "^0.26.5",
     "nps-utils": "^1.7.0",
     "tslib": "^1"
